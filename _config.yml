@@ -1,0 +1,16 @@
+defaults:
+  - scope:
+      path: ""
+      type: "html"
+    values:
+      cache_control: "max-age=31536000"
+  - scope:
+      path: ""
+      type: "css"
+    values:
+      cache_control: "max-age=31536000"
+  - scope:
+      path: ""
+      type: "js"
+    values:
+      cache_control: "max-age=31536000"
