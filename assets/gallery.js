@@ -2,6 +2,7 @@
 const filterButtons = Array.from(document.querySelectorAll('.filter-btn'));
 const gallery = document.querySelector('.gallery-images');
 const images = document.querySelectorAll('.gallery-item');
+let filteredImages = [...images];
 //---------- FILTER IMAGES BY CATEGORY ----------
 const filterGalleryImages = () => {
   filterButtons.forEach(btn => {
@@ -12,7 +13,6 @@ const filterGalleryImages = () => {
       });
       // show filtered images after delay
       setTimeout(() => {
-        let filteredImages;
         if (e.target.value.toLowerCase() === 'tous') {
           filteredImages = [...images];
         } else {
@@ -60,13 +60,12 @@ images.forEach(img => {
 })
 
 previous.addEventListener("click", () => {
-  const imagesArr = Array.from(images);
-  const currentImg = imagesArr.find(img => img.src === carouselImage.src);
-  currentImgPosition = imagesArr.indexOf(currentImg);
-  const previousImage = imagesArr[currentImgPosition - 1];
+  const currentImg = filteredImages.find(img => img.src === carouselImage.src);
+  currentImgPosition = filteredImages.indexOf(currentImg);
+  const previousImage = filteredImages[currentImgPosition - 1];
   if (!previousImage) { // reached first image, loop back to last image
-    carouselImage.src = imagesArr[imagesArr.length - 1].src;
-    carouselImage.alt = imagesArr[imagesArr.length - 1].alt;
+    carouselImage.src = filteredImages[filteredImages.length - 1].src;
+    carouselImage.alt = imfilteredImagesagesArr[filteredImages.length - 1].alt;
   } else { // go to previous image
     carouselImage.src = previousImage.src;
     carouselImage.alt = previousImage.alt;
@@ -74,13 +73,12 @@ previous.addEventListener("click", () => {
 });
 
 next.addEventListener("click", () => {
-  const imagesArr = Array.from(images);
-  const currentImg = imagesArr.find(img => img.src === carouselImage.src);
-  currentImgPosition = imagesArr.indexOf(currentImg);
-  const nextImage = imagesArr[currentImgPosition + 1];
+  const currentImg = filteredImages.find(img => img.src === carouselImage.src);
+  currentImgPosition = filteredImages.indexOf(currentImg);
+  const nextImage = filteredImages[currentImgPosition + 1];
   if (!nextImage) { // reached last image, loop back to first image
-    carouselImage.src = imagesArr[0].src;
-    carouselImage.alt = imagesArr[0].alt;
+    carouselImage.src = filteredImages[0].src;
+    carouselImage.alt = filteredImages[0].alt;
   } else { // go to next image
     carouselImage.src = nextImage.src;
     carouselImage.alt = nextImage.alt;
