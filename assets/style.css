@@ -108,8 +108,12 @@ body {
 
 .picture img {
 	width: 100%;
-
 }
+.picture.left {
+	max-width: 100%;
+	height: auto;
+}
+
 #about-me {
 	flex: 2
 }
@@ -131,10 +135,7 @@ body {
 	width: 90%;
 	font-size: 14px;
 }
-.picture.left{
-	width: 424px;
-	height: 424px;
-}
+
 .title{
 	text-align: center;
 	padding-block: 2em;
@@ -193,6 +194,7 @@ body {
 	height: 424px;
 	object-fit: cover;
 	padding: .5em;
+	cursor: pointer;
 }
 .gallery-images {
 	opacity: 0;
