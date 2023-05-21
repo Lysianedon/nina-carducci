@@ -32,9 +32,6 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/Lysianedon/nina-carducci/master/assets/images/nina-size-medium.jpg">
 <meta property="og:image:width" content="420" />
 <meta property="og:image:height" content="420" />
-<meta itemprop="name" content="Nina Carducci, photographe professionnelle">
-<meta itemprop="description" content="Photographe professionnelle spécialisée dans la photographie de portrait, mariage, famille et événements. Adresse: 68 avenue Alsace-Lorraine, Bordeaux.">
-<meta itemprop="image" content="https://raw.githubusercontent.com/Lysianedon/nina-carducci/master/assets/images/nina-size-medium.jpg">
 
 <!----------- Google Rich Snippets - Structured data (Schema.org for Google)----------->
 <script type='application/ld+json'> 
@@ -82,7 +79,7 @@
 <!-- Defer critical scripts so that they can be rendered ASAP -->
 	<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"  onload="this.onload=null;this.rel='stylesheet'" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 	<!-- Defer non-critical scripts -->
 	<script defer src="./assets/gallery.min.js"></script> 
 <noscript>
@@ -105,7 +102,7 @@
 			<li><a href="#gallery">Portfolio</a></li>
 			<li><a href="#services">Services</a></li>
 			<li><a href="#contact">Contact</a></li>
-			<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank"><img src="assets/images/instagram.png" alt="instagram link" width="20px" height="20px"></a></li>
+			<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank"><img src="assets/images/instagram.png" alt="instagram link" width="20" height="20"></a></li>
 		</ul>
 	</nav>
 </header>
@@ -115,7 +112,7 @@
 	<div class="small-carousel-gallery">
 		<div class="arrow left"></div>
 		<div class="arrow right"></div>
-		<img src="" alt="carousel image" class="carousel-image">
+		<img src="/" alt="carousel image" class="carousel-image">
 	  </div>
 	  
 	<section id="header">
@@ -139,7 +136,7 @@
 				./assets/images/slider/1920px/edward-cisneros-3_h6-1NPDGw-unsplash-1920px.jpg 1920w" 
 						src="./assets/images/slider/900px/edward-cisneros-3_h6-1NPDGw-unsplash-900px.jpg"
 						class="d-block w-100" alt="Photo de mariage d'un couple qui danse durant leur mariage"
-						sizes="100w">
+						sizes="100vw">
 				</div>
 
 				<div class="carousel-item">
@@ -149,7 +146,7 @@
 					./assets/images/slider/900px/nicholas-green-nPz8akkUmDI-unsplash-900px.jpg 900w,
 					./assets/images/slider/1200px/nicholas-green-nPz8akkUmDI-unsplash-1200px.jpg 1200w,
 					./assets/images/slider/1920px/nicholas-green-nPz8akkUmDI-unsplash-1920px.jpg 1920w" 
-						src="./assets/images/slider/900px/nicholas-green-nPz8akkUmDI-unsplash-900px.jpg" sizes="100w"
+						src="./assets/images/slider/900px/nicholas-green-nPz8akkUmDI-unsplash-900px.jpg" sizes="100vw"
 						class="d-block w-100" alt="Photo d'une foule à un concert">
 
 				</div>
@@ -161,7 +158,7 @@
 				./assets/images/slider/1200px/ryoji-iwata-wUZjnOv7t0g-unsplash-1200px.jpg 1200w,
 				./assets/images/slider/1920px/ryoji-iwata-wUZjnOv7t0g-unsplash-1920px.jpg 1920w" 
 						src="./assets/images/slider/900px/ryoji-iwata-wUZjnOv7t0g-unsplash-900px.jpg"
-						sizes="100w"
+						sizes="100vw"
 						class="d-block w-100"
 						alt="Photo d'un homme en costume traversant la route sur un passage piéton">
 				</div>
@@ -179,15 +176,19 @@
 		</div>
 		  
 	</section>
-	<section id="about" role="region" itemscope>
+	<section id="about" itemscope>
 		<div class="picture left">
 			<img srcset="./assets/images/nina-size-small.jpg 320w,
-			./assets/images/nina-size-small.jpg 425w,
-			./assets/images/nina-size-medium.jpg 900w,
-			./assets/images/nina-size-medium.jpg 1024w,
-			./assets/images/nina-size-medium.jpg 1440w,
-			./assets/images/nina-size-medium.jpg 1920w" src="./assets/images/nina-size-medium.jpg" alt="portrait de Nina Carducci, la photographe">
+              ./assets/images/nina-size-medium.jpg 900w,
+              ./assets/images/nina-size-medium.jpg 1024w,
+              ./assets/images/nina-size-medium.jpg 1440w,
+              ./assets/images/nina-size-medium.jpg 1920w"
+     sizes="(max-width: 600px) 320px,
+            (max-width: 992px) 900px,
+            1024px"
+     src="./assets/images/nina-size-medium.jpg" alt="portrait de Nina Carducci, la photographe">
 		</div>
+		
 		<div id="about-me">
 			<h2 class="about-me__title">A propos de moi</h2>
 			<h3 class="about-me__introduction">Devenir photographe était pour moi une évidence. Comme si j’y étais prédestinée. Saisir un moment, une émotion, une situation, un endroit, une lumière et les rendre immortels, voilà ce qui me fait vibrer.</h3>
@@ -199,7 +200,7 @@
 		<h2 class="title">Portfolio</h2>
 		<div class="filter-categories">
 			<ul>
-				<li><input type="button" value="Tous" class="filter-btn btn-active" class="filter-btn"></li>
+				<li><input type="button" value="Tous" class="filter-btn btn-active"></li>
 				<li><input type="button" value="Concerts" class="filter-btn"></li>
 				<li><input type="button" value="Entreprises" class="filter-btn"></li>
 				<li><input type="button" value="Mariages" class="filter-btn"></li>
@@ -230,7 +231,7 @@
 		<div class="quote">
 			<figure aria-labelledby="quote-heading">
 				<blockquote>
-					<h3 id="quote-heading"class="quote__text">"Un portrait n’est pas une ressemblance. Dès lors qu’une émotion ou qu’un fait est traduit en photo, il cesse d’être un fait pour devenir une opinion. L’inexactitude n’existe pas en photographie. Toutes les photos sont exactes. Aucune d’elles n’est la vérité."</h3>
+					<h3 id="quote-heading" class="quote__text">"Un portrait n’est pas une ressemblance. Dès lors qu’une émotion ou qu’un fait est traduit en photo, il cesse d’être un fait pour devenir une opinion. L’inexactitude n’existe pas en photographie. Toutes les photos sont exactes. Aucune d’elles n’est la vérité."</h3>
 				</blockquote>
 				<figcaption class="quote__author">- Richard Avedon</figcaption>
 			</figure>
@@ -286,7 +287,7 @@
 			<div class="form-container">
 				<h2>Une question ? Une demande de devis ?</h2>
 				<p> N’hésitez pas à m’écrire ! Je vous répondrai en moins de 24 heures.</p>
-				<form action="" method="post">
+				<form action="submit" method="post">
 					<label for="nom">Nom</label>
 					<input type="text" name="nom" id="nom">
 					<label for="email">Email</label>
